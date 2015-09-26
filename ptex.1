@@ -1,0 +1,59 @@
+.TH ptex 1Z SCRATCH
+.SH NAME
+ptex \- pre-tex formatter
+.SH SYNOPSIS
+.B ptex 
+.RB [ -abefjx ]
+.RI [ file... ]
+.SH DESCRIPTION
+Converts a file with a kind of latex style commands into an actual latex file.
+The
+.B ptex
+commands are exactly as latex commands except that cumbersomly typed
+(especially on scandinavian keyboards) characters like
+.B \\
+and
+.B {
+can be replaced with easyer accessed characters. I.e.
+.IP 
+ .section (For starters)
+.br
+ Clearly -(a times alpha = xi).
+.P
+is replaced by
+.IP
+ \\section {For starters}
+.br
+ Clearly \\(a \\times \\alpha = \\xi\).
+.P
+A later version might also do justifying of paragraphs, but this provisional
+version leaves spaces and line brakes intact.
+.SH USAGE
+.SS Options
+.TP
+.B -a
+Both expansion and justification (all).
+.TP
+.B -b
+Create backup file with the extension.
+.B .bak
+added to the original file.
+.TP
+.B -e
+Only expansion.
+.TP
+.B -f
+Run as a filter. The output will be written on standard output even
+if an input file is specified. Has no effect if the file is not specified.
+.TP
+.B -j
+Only justification.
+.TP
+.B -x
+Don't create backup file.
+.SH ENVIRONMENT
+.SH FILES
+.SH DIAGNOSTICS
+.SH BUGS
+.SH AUTHOR
+Alex Hellsten

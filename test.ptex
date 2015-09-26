@@ -1,0 +1,25 @@
+.section (This is a sample (goes (?) wrong?) ptex file)
+
+	Here we go. .mbox (again).
+	.try.this. .but
+	.also [1](2) (3). Now math where -(x leq (y-z)) and -y- is
+	arbitrary. How about a displayed formula:
+	=(alpha in lambda^(kappa times (kappa + mu)))
+	Now what?
+
+	We will try =(eta_set(xi in alpha)(phi (xi))). Also we have
+	-(x geq ({allan}) geq (alpha)) and =xi-phi=.
+
+	Färdigt \(n < p\) och \(\xi < alpha\) (nästan).
+        Låt \(s_\gamma(\xi) =
+        t(\xi)\) för alla \(\xi\not\in \set{\alpha_n}{n < \omega}\) och
+        låt \(s_\gamma(\alpha_n) = t(\alpha_{2n})\) för alla \(n <
+        \omega\).
+
+	Funkar nu -(alpha < kappa) och -beta-? Det *är* sant och
+	faktiskt *uppåt väggarna*. Men .begin (eqnarray*) x = y
+	.end (eqnarray*) BUGFIX = BUGFIX
+
+	Hur går det med -1_alpha- eller -(P mbox( är en välordning)).
+	Nu borde -- vara fixat, nej det var inte bra, låt det bli
+        $$. Men 1--2. Skriv också---hmmm... inte ---.

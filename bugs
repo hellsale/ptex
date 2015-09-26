@@ -1,0 +1,6 @@
+BUG mbox in mathmode!
+BUG eqnarray and other math environments
+ADD warning for long math mode and for file ending in math mode
+BUG -( in mathmode
+BUG mathmode command after ,
+ART check command names and warn if unknown commands (probably text)
