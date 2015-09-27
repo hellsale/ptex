@@ -5,8 +5,28 @@ Having been writing a lot of mathematics back in the days, on computers using a 
 
 And I still use it today!
 
-#Installing
+#Installing and usage
 
-Compile and put single executable somewhere in the path.  Compilation has been successful in a few linux installations on x86 hardware.  But that's it for now.  There could be quite a few problems to fix.
+Compile and put single executable somewhere in the path.  Compilation
+has been successful in a few linux installations on x86 hardware.  But
+that's it for now.  There could be quite a few problems to fix.
 
+To use in emacs the way I have been doing, put following in `.emacs`
+or such:
+```
+(defun ptex-on-region ()
+  "Pipe region through ptex."
+  (interactive)
+  (shell-command-on-region (region-beginning) (region-end) "ptex" 1 1)
+  (exchange-point-and-mark))
+```
+and bind to desired key.
 
+The whole thing is error prone, but using it on small pieces of text
+at the time, it works fine in practise.  At least for me.
+
+Maybe the most valuable idea is the following.  In math variables are
+usually single letters while single letter LaTeX commands can be
+avoided.  In math mode any then, any one character word is a variable
+and other words are commands that getting their backslashes added.  No
+need to explicitly type a backslash there!
