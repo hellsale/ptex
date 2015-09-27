@@ -61,7 +61,7 @@ fill (int mode)
 {
     int mark;
 
-    while (c != EOF && !isspace (c))
+    while (c != EOF && !isspace (c) && c != '~')
     {
         if (mode == MATH && (c == '-' || c == '_' || c == '^')) return;
         if (c == ')' || c == '}' || c == ']') return;
@@ -85,7 +85,7 @@ fill (int mode)
             c = next ();
         }
     }
-    while (isspace (c))
+    while (isspace (c) || c == '~')
     {
         release (c);
         c = next ();
@@ -131,7 +131,7 @@ command (int mode)
 
     do release (c);
     while (isalpha (c = next ()));
-    if (mode == TEXT) while (isspace (c))
+    if (mode == TEXT) while (isspace (c) || c == '~')
     {
         release (c);
         c = next ();

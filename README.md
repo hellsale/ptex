@@ -5,4 +5,8 @@ Having been writing a lot of mathematics back in the days, on computers using a 
 
 And I still use it today!
 
-Actual code will be pushed someday soon...
+#Installing
+
+Compile and put single executable somewhere in the path.  Compilation has been successful in a few linux installations on x86 hardware.  But that's it for now.  There could be quite a few problems to fix.
+
+
